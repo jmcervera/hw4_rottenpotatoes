@@ -1,0 +1,16 @@
+%h2 Similar movies for #{@movie.title}
+
+%table#movies
+  %thead
+    %tr
+      %th Title
+      %th Director
+      %th Rating
+      %th Release Date
+  %tbody
+    - @similar_movies.each do |movie|
+      %tr
+        %td= movie.title
+        %td= movie.director
+        %td= movie.rating
+        %td= movie.release_date

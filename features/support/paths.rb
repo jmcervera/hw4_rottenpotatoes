@@ -20,6 +20,18 @@ module NavigationHelpers
       movie = Movie.find_by_title("Alien")
       edit_movie_path(movie)
 
+    when /^the details page for "Star Wars"$/
+      movie = Movie.find_by_title("Star Wars")
+      movie_path(movie)
+
+    when /^the details page for "Alien"$/
+      movie = Movie.find_by_title("Alien")
+      movie_path(movie)
+
+    when /^the Similar Movies page for "Star Wars"$/
+      movie = Movie.find_by_title("Star Wars")
+      find_similar_movie_path(movie)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
